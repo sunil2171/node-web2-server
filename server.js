@@ -35,6 +35,7 @@ app.get("/about", function(req, res){
 
 app.get("/projects", function(req, res){
     res.render('projects.hbs',{
+        pageTitle: "About Page",
         message:"Some PortFolio about this page"
     })
 });
