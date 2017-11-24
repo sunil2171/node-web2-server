@@ -1,7 +1,7 @@
 var express = require("express");
 var hbs = require("hbs");
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3030;
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials')
@@ -31,6 +31,14 @@ app.get("/about", function(req, res){
        
         });
 });
+
+
+app.get("/projects", function(req, res){
+    res.render('projects.hbs',{
+        message:"Some PortFolio about this page"
+    })
+});
+
 
 app.get("/bad", function(req, res){
     res.send({
